@@ -2,7 +2,7 @@ package edu.ardo;
 
 public class User {
 
-    //propriedades (PRIVATE)
+    //propriedades / atributos (obj)
     private String firstName;
     private String lastName;
 
