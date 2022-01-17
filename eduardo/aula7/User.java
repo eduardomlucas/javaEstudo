@@ -1,4 +1,5 @@
 package aula7;
+
 //classe padrão de um usuário
 public class User {
     private String firstName;
@@ -37,6 +38,16 @@ public class User {
         }
         else{
             return firstName;
-        }
+        }  
+        
     }
+
+    //configuração do toString()
+    //sobrecarga do método toString
+    ///criando um novo padrão para o toString 
+    public String toString(){
+        return "Primeiro Nome: " + firstName +"\nÚltimo Nome: " + lastName;
+    }
+
+
 }
