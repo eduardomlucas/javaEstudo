@@ -1,5 +1,7 @@
 package aula7;
 
+import java.util.Objects;
+
 //classe padrão de um usuário
 public class User {
     private String firstName;
@@ -49,5 +51,20 @@ public class User {
         return "Primeiro Nome: " + firstName +"\nÚltimo Nome: " + lastName;
     }
 
+    //EQUALS USANDO HASHCODE
+    //comparando as propriedades do objeto
+    //neste caso vai comparar os dois nomes
+    @Override
+    public boolean equals(Object o) {
+        if(this == o) return true;
+        if( o == null || getClass() != o.getClass() ) return false;
+        User user = (User) o;
+        return Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName);
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(firstName, lastName);
+    }
 
 }
